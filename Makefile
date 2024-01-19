@@ -6,20 +6,25 @@ OBJS = $(SRCS:.c=.o)
 OBJSB = $(SRCSB:.c=.o)
 CFLAGS = -Wall -Werror -Wextra
 MLXFLAGS = -lmlx_Linux -lXext -lX11 -no-pie
-LIBFT = ./libft/libft.a
+LIBFT = ./lib/libft/libft.a
+FT_PRINTF = ./lib/ft_printf/libftprintf.a
+GNL = lib/get_next_line/get_next_line.c   lib/get_next_line/get_next_line_utils.c
 
 all:$(LIBFT) $(NAME)
 
 $(LIBFT):
-	make -C ./libft
+	make -C ./lib/libft/
 
-$(NAME): $(OBJS) $(LIBFT)
-	gcc $(OBJS) $(LIBFT) $(MLXFLAGS) $(CFLAGS) -o $(NAME)
+$(FT_PRINTF):
+	make -C ./lib/ft_printf/
+
+$(NAME): $(OBJS) $(LIBFT) $(FT_PRINTF)
+	gcc $(OBJS) $(LIBFT) $(FT_PRINTF) $(GNL) $(MLXFLAGS) $(CFLAGS) -o $(NAME)
 
 $(NAMEB):bonus 
 
-bonus: $(OBJSB) $(LIBFT)
-	gcc $(OBJSB) $(LIBFT) $(MLXFLAGS) $(CFLAGS) -o $(NAMEB)
+bonus: $(OBJSB) $(LIBFT) $(FT_PRINTF)
+	gcc $(OBJSB) $(LIBFT) $(FT_PRINTF) $(GNL) $(MLXFLAGS) $(CFLAGS) -o $(NAMEB)
 
 clean:
 	make clean -C ./libft
