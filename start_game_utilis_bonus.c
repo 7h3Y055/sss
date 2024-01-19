@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   start_game_utilis.c                                :+:      :+:    :+:   */
+/*   start_game_utilis_bonus.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybouchma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 11:16:05 by ybouchma          #+#    #+#             */
-/*   Updated: 2024/01/17 11:47:39 by ybouchma         ###   ########.fr       */
+/*   Updated: 2024/01/19 10:06:58 by ybouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,33 @@ void	get_exit_position(int *ep, t_so_long *ptr)
 		}
 		ep[0]++;
 	}
+}
+
+void	*get_asset(t_so_long *ptr, char c)
+{
+	if (c == '1')
+		return (ptr->assets.wall);
+	if (c == '0')
+		return (ptr->assets.floor);
+	if (c == 'P')
+	{
+		if (ptr->last_pp == 1)
+			return (ptr->assets.player.back);
+		if (ptr->last_pp == 4)
+			return (ptr->assets.player.left);
+		if (ptr->last_pp == 3)
+			return (ptr->assets.player.front);
+		if (ptr->last_pp == 2)
+			return (ptr->assets.player.right);
+	}
+	if (c == 'E')
+	{
+		if (ptr->exit)
+			return (ptr->assets.door.close);
+		else
+			return (ptr->assets.door.open);
+	}
+	if (c == 'X')
+		return (ptr->assets.enemy);
+	return (NULL);
 }

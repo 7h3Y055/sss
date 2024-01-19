@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animitions.c                                       :+:      :+:    :+:   */
+/*   animitions_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybouchma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 10:15:32 by ybouchma          #+#    #+#             */
-/*   Updated: 2024/01/17 12:44:57 by ybouchma         ###   ########.fr       */
+/*   Updated: 2024/01/19 10:09:32 by ybouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,6 @@ int	animations(t_so_long *ptr)
 	get_player_position(pp, ptr->map_2d);
 	if (pp[0] == ptr->ep[0] && pp[1] == ptr->ep[1])
 		win(ptr);
-	//destroy_all(ptr, 1);
 	if (ptr->available_coins == 0 && ptr->exit)
 	{
 		mlx_put_image_to_window(ptr->mlx, ptr->mlx_win, \

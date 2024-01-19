@@ -6,12 +6,11 @@
 /*   By: ybouchma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 11:16:49 by ybouchma          #+#    #+#             */
-/*   Updated: 2024/01/17 11:19:18 by ybouchma         ###   ########.fr       */
+/*   Updated: 2024/01/19 10:09:11 by ybouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
-
 
 size_t	back_track_coin_counter(t_so_long *ptr, char **map_2d, int y, int x)
 {
@@ -42,6 +41,7 @@ size_t	count_available_coins(t_so_long *ptr)
 	free_map(map_2d);
 	return (c);
 }
+
 void	get_player_position(int *pp, char **map_2d)
 {
 	pp[0] = 0;

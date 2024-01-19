@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long_bonus.h                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ybouchma <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/19 10:09:48 by ybouchma          #+#    #+#             */
+/*   Updated: 2024/01/19 10:10:54 by ybouchma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SO_LONG_BONUS_H
 # define SO_LONG_BONUS_H
 
@@ -13,7 +25,6 @@
 # define A 97
 # define ENEMY_SPEED 25
 # define COIN_SPEED 3
-
 
 typedef struct s_player
 {
@@ -56,7 +67,6 @@ typedef struct s_numbers
 	void	*zero;
 }	t_numbers;
 
-
 typedef struct s_assets
 {
 	t_player	player;
@@ -68,7 +78,6 @@ typedef struct s_assets
 	void		*enemy;
 	void		*black;
 }	t_assets;
-
 
 typedef struct s_so_long
 {
@@ -92,7 +101,7 @@ typedef struct s_components
 	int	c;
 	int	e;
 	int	p;
-	int x;
+	int	x;
 	int	others;
 }	t_components;
 

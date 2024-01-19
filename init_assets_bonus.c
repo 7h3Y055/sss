@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_assets.c                                      :+:      :+:    :+:   */
+/*   init_assets_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybouchma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 20:45:43 by ybouchma          #+#    #+#             */
-/*   Updated: 2024/01/17 12:31:46 by ybouchma         ###   ########.fr       */
+/*   Updated: 2024/01/19 10:07:21 by ybouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,33 +103,4 @@ void	init_assets(t_so_long *ptr)
 			ptr->mlx, "./textures/floor.xpm", &w, &w);
 	ptr->assets.black = mlx_xpm_file_to_image(\
 			ptr->mlx, "./textures/black.xpm", &w, &w);
-}
-
-void	*get_asset(t_so_long *ptr, char c)
-{
-	if (c == '1')
-		return (ptr->assets.wall);
-	if (c == '0')
-		return (ptr->assets.floor);
-	if (c == 'P')
-	{
-		if (ptr->last_pp == 1)
-			return (ptr->assets.player.back);
-		if (ptr->last_pp == 4)
-			return (ptr->assets.player.left);
-		if (ptr->last_pp == 3)
-			return (ptr->assets.player.front);
-		if (ptr->last_pp == 2)
-			return (ptr->assets.player.right);
-	}
-	if (c == 'E')
-	{
-		if (ptr->exit)
-			return (ptr->assets.door.close);
-		else
-			return (ptr->assets.door.open);
-	}
-	if (c == 'X')
-		return (ptr->assets.enemy);
-	return (NULL);
 }
