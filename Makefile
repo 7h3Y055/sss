@@ -27,10 +27,12 @@ bonus: $(OBJSB) $(LIBFT) $(FT_PRINTF)
 	gcc $(OBJSB) $(LIBFT) $(FT_PRINTF) $(GNL) $(MLXFLAGS) $(CFLAGS) -o $(NAMEB)
 
 clean:
-	make clean -C ./libft
+	make clean -C ./lib/libft/
+	make clean -C ./lib/ft_printf/
 	rm -f $(OBJS) $(OBJSB)
 fclean: clean
-	make fclean -C ./libft
+	make fclean -C ./lib/libft/
+	make fclean -C ./lib/ft_printf/
 	rm -f $(NAME) $(NAMEB)
 
 re:fclean all
