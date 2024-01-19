@@ -6,7 +6,7 @@
 /*   By: ybouchma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 16:14:57 by ybouchma          #+#    #+#             */
-/*   Updated: 2024/01/17 12:32:16 by ybouchma         ###   ########.fr       */
+/*   Updated: 2024/01/18 21:12:32 by ybouchma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "libft/libft.h"
 # include <fcntl.h>
 # include <stdio.h>
-# include "minilibx-linux/mlx.h"
+# include <mlx.h>
 # include <X11/keysym.h>
 # include <X11/X.h>
 # define W 119

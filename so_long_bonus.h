@@ -4,7 +4,7 @@
 # include "libft/libft.h"
 # include <fcntl.h>
 # include <stdio.h>
-# include "minilibx-linux/mlx.h"
+# include <mlx.h>
 # include <X11/keysym.h>
 # include <X11/X.h>
 # define W 119
